@@ -20,14 +20,14 @@
       "direction": "out",
       "name": "outputBlob2",
       "path": "outcontainer/{FileName}-{Datetime}.json",
-      "connection": "keomizoapimapp_STORAGE"
+      "connection": "AzureWebJobsStorage"
     },
     {
       "type": "blob",
       "direction": "out",
       "name": "outputBlob",
       "path": "outcontainer/{rand-guid}.json",
-      "connection": "keomizoapimapp_STORAGE"
+      "connection": "AzureWebJobsStorage"
     }
   ]
 }
