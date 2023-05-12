@@ -20,6 +20,8 @@
       "direction": "out",
       "name": "outputTable",
       "tableName": "reviews",
+      "partitionKey" : "Type",
+      "rowKey": "id",
       "connection": "AzureWebJobsStorage"
     }
   ]

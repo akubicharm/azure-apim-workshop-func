@@ -10,12 +10,10 @@ module.exports = async function (context, req) {
     context.bindings.outputTable = [];
 
     context.bindings.outputTable.push({
-        PartitionKey: "Review",
-        RowKey: name,
+        PartitionKey: name,
         Name: name,
         Rate: rate
     });
-
 
     const responseMessage = "Review Created";
 
