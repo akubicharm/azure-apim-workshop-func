@@ -17,13 +17,12 @@
     },
     {
       "type": "cosmosDB",
-      "direction": "out",
-      "name": "outDoc",
+      "direction": "in",
+      "name": "inDoc",
       "databaseName": "mydb",
       "collectionName": "reviews",
-      "createIfNotExists": true,
+      "sqlQuery": "SELECT c.id, c.name, c.rate from c",
       "connectionStringSetting": "DOCUMENTDB"
     }
-  ],
-  "disabled": false
+  ]
 }

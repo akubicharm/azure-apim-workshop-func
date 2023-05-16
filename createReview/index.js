@@ -7,13 +7,8 @@ module.exports = async function (context, req) {
     context.log(req.body.Name);
     context.log(req.body.Rate);
 
-    context.bindings.outputTable = [];
-
-    context.bindings.outputTable.push({
-        PartitionKey: name,
-        Name: name,
-        Rate: rate
-    });
+//    context.bindings.outDoc = req.body;
+    context.bindings.outDoc = req.body;
 
     const responseMessage = "Review Created";
 
