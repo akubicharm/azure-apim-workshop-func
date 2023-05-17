@@ -14,15 +14,6 @@
       "type": "http",
       "direction": "out",
       "name": "res"
-    },
-    {
-      "type": "cosmosDB",
-      "direction": "in",
-      "name": "inDoc",
-      "databaseName": "mydb",
-      "collectionName": "reviews",
-      "sqlQuery": "SELECT c.id, c.name, c.rate from c",
-      "connectionStringSetting": "DOCUMENTDB"
     }
   ]
 }

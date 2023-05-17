@@ -2,15 +2,9 @@ module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
 
-    var documents = context.bindings.inDoc;
-    var resMsg = JSON.stringify(documents);
-    for (var i = 0; i < documents.length; i++) {
-      var document = documents[i];
-      // operate on each document
-      context.log(document);
-    }
+    reviews = '[{"name": "chocolate", "rate": 5}, {"name": "coffee", "rate": 4}, {"name": "tea", "rate": 3}]'
 
-    const responseMessage = resMsg;
+    const responseMessage = reviews;
 
     context.res = {
         // status: 200, /* Defaults to 200 */

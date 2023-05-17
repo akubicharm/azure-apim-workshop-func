@@ -1,14 +1,16 @@
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
-    const rate = (req.body && req.body.Rate);
-    const name = (req.body && req.body.Name);
+    const rate = (req.query.rate || req.body && req.body.rate);
+    const name = (req.query.name || req.body && req.body.name);
 
-    context.log(req.body.Name);
-    context.log(req.body.Rate);
+    context.log(rate);
+    context.log(name);
 
-//    context.bindings.outDoc = req.body;
-    context.bindings.outDoc = req.body;
+    if (rate == null) {
+        context.log("rate is null");
+        throw 'rate is null';
+    }
 
     const responseMessage = "Review Created";
 
