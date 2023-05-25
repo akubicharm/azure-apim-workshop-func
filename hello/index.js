@@ -3,7 +3,7 @@ module.exports = async function (context, req) {
 
     const name = (req.query.name || (req.body && req.body.name));
 
-    auth = context.req.headers.x-ms-token-aad-id-token;
+    auth = context.req.headers;
     context.log(context.req.headers)
 
     // const responseMessage = name
@@ -11,7 +11,7 @@ module.exports = async function (context, req) {
     //     : "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.";
 
     const responseMessage = auth
-        ? "Authorization: "  + auth
+        ? auth
         : "No Authorization header found";
 
     context.res = {
