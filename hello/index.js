@@ -3,7 +3,7 @@ module.exports = async function (context, req) {
 
     const name = (req.query.name || (req.body && req.body.name));
 
-    context.log(req.header.Authorization);
+    context.log(context.req.headers.authorization)
 
     const responseMessage = name
         ? "Hello, " + name + ". This HTTP triggered function executed successfully."
