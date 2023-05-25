@@ -3,7 +3,7 @@ module.exports = async function (context, req) {
 
     const name = (req.query.name || (req.body && req.body.name));
 
-    auth = context.req.headers.authorization;
+    auth = context.req.headers.x-ms-token-aad-id-token;
     context.log(context.req.headers)
 
     // const responseMessage = name
